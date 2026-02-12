@@ -47,7 +47,7 @@ export default function Timeline() {
                             <Heart className="w-6 h-6 md:w-8 md:h-8 text-red-600 fill-red-600" />
                         </div>
 
-                        <div className={`flex-1 md:w-5/12 bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-xl hover:bg-white/20 transition-colors ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'
+                        <div className={`flex-1 md:w-5/12 bg-white/5 md:bg-white/10 backdrop-blur-sm md:backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-xl hover:bg-white/20 transition-colors ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'
                             } text-right`}>
                             <div className={`flex items-center gap-3 text-red-200 mb-3 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
                                 } justify-end`}>
