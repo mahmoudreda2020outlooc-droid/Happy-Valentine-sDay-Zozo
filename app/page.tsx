@@ -44,21 +44,21 @@ export default function Home() {
             transition={{ duration: 1 }}
           >
             {/* Hero Section */}
-            <section className="h-screen flex flex-col items-center justify-center relative z-10 px-4 text-center">
+            <section className="min-h-screen flex flex-col items-center justify-center relative z-10 px-4 py-12 text-center">
 
-              <div className="bg-white/10 backdrop-blur-md p-12 rounded-[3rem] border border-white/20 shadow-2xl transition-all duration-500 hover:bg-white/15">
+              <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] border border-white/20 shadow-2xl transition-all duration-500 hover:bg-white/15 w-full max-w-lg md:max-w-none">
                 <div className="relative inline-block">
-                  <Heart className="w-28 h-28 text-red-500 mx-auto mb-8 animate-pulse fill-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
-                  <Sparkles className="absolute -top-2 -right-2 text-yellow-300 w-10 h-10 animate-spin-slow" />
+                  <Heart className="w-20 h-20 md:w-28 md:h-28 text-red-500 mx-auto mb-6 md:mb-8 animate-pulse fill-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
+                  <Sparkles className="absolute -top-2 -right-2 text-yellow-300 w-8 h-8 md:w-10 md:h-10 animate-spin-slow" />
                 </div>
 
-                <h1 className="text-6xl md:text-8xl font-black text-white mb-6 drop-shadow-lg leading-tight uppercase tracking-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-white mb-6 drop-shadow-lg leading-tight uppercase tracking-tight">
                   Happy Valentine&apos;s<br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-red-100 italic">
                     Day <span className="text-red-500">Zozo</span>
                   </span>
                 </h1>
-                <p className="text-2xl md:text-3xl text-red-100 font-bold mt-6 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-xl md:text-3xl text-red-100 font-bold mt-4 md:mt-6 max-w-2xl mx-auto leading-relaxed px-2">
                   يوم الفلانتين ده معمول عشانك انتي وبس ❤️
                 </p>
 
@@ -66,9 +66,9 @@ export default function Home() {
                   whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
                   whileTap={{ scale: 0.95 }}
                   onClick={startExperience}
-                  className="mt-10 px-12 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full text-2xl font-black text-white shadow-xl hover:shadow-white/20 transition-all flex items-center gap-3 mx-auto group"
+                  className="mt-8 md:mt-10 px-8 py-3 md:px-12 md:py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full text-xl md:text-2xl font-black text-white shadow-xl hover:shadow-white/20 transition-all flex items-center gap-3 mx-auto group"
                 >
-                  Start <Heart className="w-6 h-6 group-hover:fill-red-500 group-hover:text-red-500 transition-colors" />
+                  Start <Heart className="w-5 h-5 md:w-6 md:h-6 group-hover:fill-red-500 group-hover:text-red-500 transition-colors" />
                 </motion.button>
               </div>
 

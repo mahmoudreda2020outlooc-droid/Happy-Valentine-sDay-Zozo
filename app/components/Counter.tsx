@@ -34,9 +34,9 @@ export default function Counter() {
     }, []);
 
     const TimeUnit = ({ value, label }: { value: number; label: string }) => (
-        <div className="flex flex-col items-center bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-3xl border border-white/20 min-w-[100px] md:min-w-[140px] shadow-xl">
-            <span className="text-4xl md:text-6xl font-black text-white mb-2">{value}</span>
-            <span className="text-red-200 font-bold text-sm md:text-base uppercase tracking-widest font-arabic">{label}</span>
+        <div className="flex flex-col items-center bg-white/10 backdrop-blur-md p-3 md:p-6 rounded-2xl md:rounded-3xl border border-white/20 min-w-[75px] sm:min-w-[100px] md:min-w-[140px] shadow-xl">
+            <span className="text-2xl sm:text-4xl md:text-6xl font-black text-white mb-1 md:mb-2">{value}</span>
+            <span className="text-red-200 font-bold text-[10px] sm:text-xs md:text-base uppercase tracking-wider md:tracking-widest font-arabic">{label}</span>
         </div>
     );
 
@@ -55,7 +55,7 @@ export default function Counter() {
                     <Heart className="w-8 h-8 text-red-400 fill-red-400" />
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-8">
                     <TimeUnit value={timeLeft.months} label="شهر" />
                     <TimeUnit value={timeLeft.days} label="يوم" />
                     <TimeUnit value={timeLeft.hours} label="ساعة" />
