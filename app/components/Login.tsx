@@ -76,7 +76,7 @@ export default function Login({ onLogin }: LoginProps) {
                         type="submit"
                         className="w-full bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-red-500/30 transition-all text-lg font-sans"
                     >
-                        Happy Valentine&apos;s Day Zozo ❤️
+                        Happy Valentine&apos;s Day <span className="text-red-400">Zozo</span> ❤️
                     </motion.button>
                 </form>
             </motion.div>

@@ -35,13 +35,13 @@ export default function HeartAnimation() {
             delay: heart.delay,
             ease: 'linear',
           }}
-          className="absolute text-white font-bold blur-[1px]" // White hearts
+          className="absolute text-red-500 font-bold blur-[1px]" // Red hearts
           style={{
             left: `${heart.left}%`,
             fontSize: `${heart.size}rem`
           }}
         >
-          ❤
+          ❤️
         </motion.div>
       ))}
     </div>
