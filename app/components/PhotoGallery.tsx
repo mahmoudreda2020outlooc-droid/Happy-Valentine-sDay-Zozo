@@ -62,24 +62,23 @@ export default function PhotoGallery() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setSelectedImage(null)}
-                        className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+                        className="fixed inset-0 z-[100] bg-black/90 md:bg-black/95 md:backdrop-blur-xl flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
                     >
                         <motion.button
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
-                            className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 p-3 rounded-full backdrop-blur-md transition-colors z-[110]"
+                            className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/20 p-3 rounded-full backdrop-blur-md transition-colors z-[110]"
                             onClick={() => setSelectedImage(null)}
                         >
                             <X size={32} />
                         </motion.button>
 
                         <motion.div
-                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-                            animate={{ scale: 1, opacity: 1, y: 0 }}
-                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                            className="relative w-full max-w-5xl h-full max-h-[85vh] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.3)] border-2 border-white/10"
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative w-full max-w-5xl h-full max-h-[85vh] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.2)] border border-white/10"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <Image
@@ -88,6 +87,7 @@ export default function PhotoGallery() {
                                 fill
                                 className="object-contain"
                                 priority
+                                quality={90}
                             />
                         </motion.div>
                     </motion.div>

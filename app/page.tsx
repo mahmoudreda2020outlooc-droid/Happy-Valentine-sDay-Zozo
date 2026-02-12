@@ -2,16 +2,19 @@
 
 import { useState } from 'react';
 import { Cairo } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import HeartAnimation from './components/HeartAnimation';
-import Timeline from './components/Timeline';
-import PhotoGallery from './components/PhotoGallery';
-import LoveLetter from './components/LoveLetter';
-import TypingMessage from './components/TypingMessage';
 import Login from './components/Login';
-import Counter from './components/Counter';
 import MusicPlayer from './components/MusicPlayer';
 import { Heart, Sparkles } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+
+// Lazy load heavy components
+const Timeline = dynamic(() => import('./components/Timeline'), { ssr: false });
+const PhotoGallery = dynamic(() => import('./components/PhotoGallery'), { ssr: false });
+const LoveLetter = dynamic(() => import('./components/LoveLetter'), { ssr: false });
+const TypingMessage = dynamic(() => import('./components/TypingMessage'), { ssr: false });
+const Counter = dynamic(() => import('./components/Counter'), { ssr: false });
 
 const cairo = Cairo({ subsets: ['arabic'], weight: ['400', '700', '900'] });
 
